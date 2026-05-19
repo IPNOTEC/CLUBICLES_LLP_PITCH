@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CLUBICLES — Investor Brief 2026</title>
+<title>CLUBICLES — Grant & Strategic Pitch 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
@@ -1101,6 +1101,187 @@ footer {
   padding:2px 8px;
 }
 .tc-icon { font-size:22px;margin-bottom:10px; }
+
+/* ══════════════════════════════════════
+   TAGLINE
+══════════════════════════════════════ */
+.tagline-strip {
+  background: linear-gradient(90deg, var(--navy) 0%, var(--navy2) 50%, var(--navy) 100%);
+  border-top: 1px solid rgba(79,163,247,0.2);
+  border-bottom: 1px solid rgba(79,163,247,0.2);
+  text-align: center;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border-radius: var(--radius2);
+}
+.tagline-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.tagline-text span { color: var(--orange2); }
+.tagline-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; color: rgba(255,255,255,0.35);
+  letter-spacing: 0.15em; margin-top: 4px;
+}
+
+/* ══════════════════════════════════════
+   FOMO STRIP (bottom)
+══════════════════════════════════════ */
+.fomo-bottom {
+  background: var(--navy);
+  border: 1px solid rgba(232,93,4,0.3);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius2);
+  padding: 20px 24px;
+  margin: 8px 0 24px;
+}
+.fb-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; color: var(--orange2);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.fb-text {
+  font-size: 14px; color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+}
+.fb-text strong { color: var(--orange2); }
+
+/* ══════════════════════════════════════
+   INVESTOR NOTE (expandable above footer)
+══════════════════════════════════════ */
+.inv-note-wrap {
+  margin: 0 32px 0;
+  padding: 0 0 20px;
+}
+@media(max-width:768px) { .inv-note-wrap { margin: 0 16px 0; } }
+.inv-expand-btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  width: 100%;
+  background: rgba(217,119,6,0.07);
+  border: 1px solid rgba(217,119,6,0.25);
+  border-radius: var(--radius2);
+  padding: 12px 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; font-weight: 600; color: var(--gold);
+  cursor: pointer; letter-spacing: 0.05em;
+  transition: background .15s;
+  max-width: 1200px; margin: 0 auto 0;
+}
+.inv-expand-btn:hover { background: rgba(217,119,6,0.14); }
+.inv-expandable {
+  max-height: 0; overflow: hidden; transition: max-height .4s ease;
+  max-width: 1200px; margin: 0 auto;
+}
+.inv-expandable.open { max-height: 400px; }
+.inv-inner {
+  background: rgba(217,119,6,0.05);
+  border: 1px solid rgba(217,119,6,0.18);
+  border-top: none;
+  border-radius: 0 0 var(--radius2) var(--radius2);
+  padding: 16px 20px;
+  font-size: 13px; color: var(--body); line-height: 1.7;
+}
+.inv-inner strong { color: var(--gold); }
+
+/* ══════════════════════════════════════
+   PARTNERSHIP PANEL
+══════════════════════════════════════ */
+.partner-box {
+  background: var(--slate);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 18px 20px;
+  text-align: center;
+}
+.partner-box-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--ink); margin-bottom: 6px;
+}
+.partner-box-sub {
+  font-size: 12px; color: var(--muted); line-height: 1.6;
+}
+
+/* ══════════════════════════════════════
+   PIPELINE CARD
+══════════════════════════════════════ */
+.pipeline-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--cobalt);
+  border-radius: var(--radius2);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+}
+.pipeline-card h5 {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px; font-weight: 600;
+  color: var(--ink); margin-bottom: 4px;
+}
+.pipeline-card p { font-size: 12px; color: var(--muted); }
+.pipeline-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px; font-weight: 700;
+  background: rgba(26,111,196,0.1); color: var(--cobalt);
+  border: 1px solid rgba(26,111,196,0.2);
+  border-radius: 3px; padding: 2px 7px;
+  margin-right: 6px;
+}
+.pipeline-badge.orange { background: rgba(232,93,4,0.1); color: var(--orange); border-color: rgba(232,93,4,0.2); }
+
+/* ══════════════════════════════════════
+   ENHANCED MOBILE RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:768px) {
+  #topbar { padding: 0 14px; height: 48px; }
+  .tb-tag { display: none; }
+  .tb-badge { display: none; }
+  .tb-brand { font-size: 14px; }
+  .tb-cta { font-size: 9px; padding: 5px 12px; }
+  #tabnav { padding: 0 10px; }
+  .tn-item { font-size: 9px; padding: 0 10px; height: 36px; }
+  main { margin-top: 84px; padding: 0 14px 50px; }
+  .page-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .ph-title { font-size: 17px; }
+  .kpi-row { grid-template-columns: 1fr 1fr; }
+  .g2,.g3,.g4 { grid-template-columns: 1fr; }
+  .hero-strip { flex-direction: column; padding: 20px; }
+  .fomo-box { max-width: 100%; }
+  .hs-meta { gap: 16px; }
+  .hs-title { font-size: 20px; }
+  .ask-amount { font-size: 48px; }
+  .timeline { flex-direction: column; }
+  .tl-phase { border-top: none; border-left: 3px solid var(--slate3); border-right: none; border-bottom: 1px solid var(--border); border-radius: 0; }
+  .tl-phase:first-child { border-radius: var(--radius) var(--radius) 0 0; border-left: 3px solid var(--orange); border-top: none; }
+  .tl-phase:last-child { border-radius: 0 0 var(--radius) var(--radius); border-bottom: none; }
+  .tl-phase.active { border-left-color: var(--orange); }
+  .savings-strip { grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px; }
+  .ue-hero-strip { grid-template-columns: 1fr; }
+  .ue-hero-item { border-right: none; border-bottom: 1px solid rgba(26,111,196,0.12); }
+  .ue-hero-item:last-child { border-bottom: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  footer { margin: 40px -14px -50px; padding: 24px 14px 20px; }
+  .inv-note-wrap { margin: 0 14px 0; }
+  .links-bar { gap: 8px; }
+  .link-btn { font-size: 9px; padding: 5px 10px; }
+  .bm-table th, .bm-table td { font-size: 10px; padding: 7px 6px; }
+  .comp-table th, .comp-table td { font-size: 9px; padding: 6px 5px; }
+  .deck-iframe-wrap { padding-bottom: 70%; }
+  .tagline-strip { margin-bottom: 16px; }
+  .tagline-text { font-size: 11px; letter-spacing: 0.15em; }
+  .scenario { padding: 14px; }
+  .sc-num { font-size: 26px; }
+}
+@media(max-width:400px) {
+  .kpi-row { grid-template-columns: 1fr; }
+  .tn-item { font-size: 8px; padding: 0 8px; }
+  .calc-grid { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1115,7 +1296,7 @@ footer {
     <span class="tb-tag" style="display:none;display:block">Investor Brief · May 2026</span>
   </div>
   <div class="tb-right">
-    <span class="tb-tag">Pre-Revenue · ₹70L Round</span>
+    <span class="tb-tag">Grant & Strategic Round · 2026</span>
     <a href="https://wa.me/916292306090?text=Hi%20Bharath%2C%20I%20came%20across%20the%20CLUBICLES%20pitch%20and%20I%27d%20like%20to%20explore%20the%20grant%2Fpartnership%20opportunity." class="tb-cta" target="_blank">Connect →</a>
   </div>
 </div>
@@ -1128,13 +1309,14 @@ footer {
   <a class="tn-item" href="#why-now">Why Now</a>
   <a class="tn-item" href="#market">Market</a>
   <a class="tn-item" href="#solution">Solution</a>
-  <a class="tn-item" href="#bizmodel">Business Model</a>
+  <a class="tn-item" href="#bizmodel">Biz Model</a>
   <a class="tn-item" href="#financials">Financials</a>
   <a class="tn-item" href="#competition">Competition</a>
   <a class="tn-item" href="#roadmap">Roadmap</a>
   <a class="tn-item" href="#grants">Grants</a>
   <a class="tn-item" href="#funds">Use of Funds</a>
   <a class="tn-item" href="#ask">The Ask</a>
+  <a class="tn-item" href="#pipeline">Pipeline</a>
   <a class="tn-item" href="#pitch-deck">Full Deck</a>
 </nav>
 
@@ -1142,6 +1324,11 @@ footer {
      MAIN
 ══════════════════════════════════════ -->
 <main>
+<!-- TAGLINE -->
+<div class="tagline-strip fa">
+  <div class="tagline-text"><span>Connect</span> &nbsp;·&nbsp; <span>Collaborate</span> &nbsp;·&nbsp; <span>Create</span></div>
+  <div class="tagline-sub">India's Hyperlocal Co-Working Aggregator · Bengaluru 2026</div>
+</div>
 
 <!-- ─────────────────────────────────────
      01 · OVERVIEW
@@ -1157,7 +1344,7 @@ footer {
 
   <div class="hero-strip fa">
     <div class="hs-main">
-      <div class="hs-eyebrow">01 · Investor Summary · Bengaluru 2026</div>
+      <div class="hs-eyebrow">01 · Grant &amp; Strategic Summary · Bengaluru 2026</div>
       <div class="hs-title">Work close. <em>Not commute far.</em></div>
       <div class="hs-desc">India's first hyperlocal co-working aggregator — connecting 400M+ knowledge workers to verified workspaces within 15 minutes of home. Zero real estate owned. Asset-light. Community-first.</div>
       <div class="hs-meta">
@@ -1167,9 +1354,6 @@ footer {
         <div class="hs-stat"><div class="hs-lbl">Runway</div><div class="hs-val">15 months</div><div class="hs-vsub">To Series A</div></div>
         <div class="hs-stat"><div class="hs-lbl">Min. Ticket</div><div class="hs-val">₹5L</div><div class="hs-vsub">~$6,000 USD</div></div>
       </div>
-    </div>
-    <div class="fomo-box">
-      <strong>Window open now.</strong> Awfis listed on NSE. Smartworks IPO'd July 2025 at ₹582Cr. IndiQube filed DRHP. Every institutional player validated the co-working thesis — and every single one left the <strong>neighbourhood workspace completely untouched.</strong>
     </div>
   </div>
 
@@ -1195,33 +1379,33 @@ footer {
       <div class="kpi-sub">~$1.8M · 2,000 spaces</div>
     </div>
     <div class="kpi green">
-      <div class="kpi-label">LTV : CAC</div>
-      <div class="kpi-value green">7.2:1</div>
-      <div class="kpi-sub">2.5 month payback</div>
+      <div class="kpi-label">LTV : CAC (User · Solo)</div>
+      <div class="kpi-value green">4.8:1</div>
+      <div class="kpi-sub">Supply side 12:1 (Plan A) · 44:1 (Plan B)</div>
     </div>
   </div>
 
   <div class="g2 fa">
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">Entity & Registration</span><span class="panel-tag">Legal Status</span></div>
+      <div class="panel-head"><span class="panel-title">Entity &amp; Registration</span><span class="panel-tag">Legal Status</span></div>
       <div class="panel-body compact">
         <div class="info-row"><span class="ir-label">Entity</span><span class="ir-value">CLUBICLES LLP</span></div>
+        <div class="info-row"><span class="ir-label">LLP Identification No.</span><span class="ir-value">ACS-4017</span></div>
         <div class="info-row"><span class="ir-label">GSTIN</span><span class="ir-value">29AAVFC8030H1Z1</span></div>
-        <div class="info-row"><span class="ir-label">Parent</span><span class="ir-value">IPNOTEC Corp (OPC) Pvt Ltd</span></div>
-        <div class="info-row"><span class="ir-label">CIN</span><span class="ir-value">U63122KA2026OPC214615</span></div>
         <div class="info-row"><span class="ir-label">Recognition</span><span class="ir-value">DPIIT · StartupIndia</span></div>
         <div class="info-row"><span class="ir-label">Domicile</span><span class="ir-value">Bengaluru, Karnataka</span></div>
       </div>
     </div>
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">Investment Terms</span><span class="panel-tag">Round Details</span></div>
+      <div class="panel-head"><span class="panel-title">Partnership Opportunities</span><span class="panel-tag">Grant &amp; Strategic Round</span></div>
       <div class="panel-body compact">
-        <div class="info-row"><span class="ir-label">Total Raise</span><span class="ir-value" style="color:var(--orange);font-size:14px;">₹70,00,000</span></div>
-        <div class="info-row"><span class="ir-label">Instrument</span><span class="ir-value">Grant / Convertible Note</span></div>
-        <div class="info-row"><span class="ir-label">Min. Ticket</span><span class="ir-value">₹5 Lakhs (~$6K)</span></div>
-        <div class="info-row"><span class="ir-label">Equity</span><span class="ir-value">No forced dilution at this stage</span></div>
+        <div class="info-row"><span class="ir-label">Round Ask</span><span class="ir-value" style="color:var(--orange);font-size:14px;">₹70,00,000</span></div>
         <div class="info-row"><span class="ir-label">Runway</span><span class="ir-value">15 months → Series A</span></div>
         <div class="info-row"><span class="ir-label">Series A target</span><span class="ir-value">₹5–10 Crore</span></div>
+        <div class="partner-box" style="margin-top:14px;">
+          <div class="partner-box-title">Partnership structure &amp; terms</div>
+          <div class="partner-box-sub">Open to government grants, strategic partnerships, and convertible notes. Structure and terms to be discussed based on partner profile and engagement model.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1331,8 +1515,9 @@ footer {
         <thead><tr><th>Persona</th><th>Description</th><th>Pain Point</th><th>CLUBICLES Value</th></tr></thead>
         <tbody>
           <tr><td><strong>Hybrid professional</strong></td><td>IT/tech employee, 3 WFH days/wk</td><td>Home not conducive, long commute to office</td><td>Verified desk 1–3 km away, any day</td></tr>
-          <tr><td><strong>Freelancer / Solopreneur</strong></td><td>Designer, consultant, developer</td><td>Isolation, no professional space, coffee shop noise</td><td>Community + verified workspace at ₹10/booking</td></tr>
+          <tr><td><strong>Freelancer / Solopreneur</strong></td><td>Designer, consultant, developer</td><td>Isolation, no professional space, coffee shop noise</td><td>Community + verified workspace at ₹101/hr</td></tr>
           <tr><td><strong>Remote team (SME)</strong></td><td>5–20 person distributed teams</td><td>No permanent office needed, ad hoc meeting space</td><td>Corporate flex plan, instant booking</td></tr>
+          <tr><td><strong>Satellite Office</strong></td><td>Enterprise branch, daily block bookings</td><td>Capex for a full office not justified; need 10–30 desks near employee clusters</td><td>Daily block desk reservations, custom pricing, SLA-backed availability</td></tr>
           <tr><td><strong>Space Owner</strong></td><td>Café, library, society hall owner</td><td>60–70% idle capacity, no digital discovery</td><td>Dashboard + bookings + revenue</td></tr>
         </tbody>
       </table>
@@ -1428,7 +1613,11 @@ footer {
   </div>
 
   <div class="note cobalt fa" style="margin-top:16px;">
-    <strong>Tech Partner:</strong> Gowtham Cloud Solutions Pvt Ltd (GCS) — strategic technology partnership · 70/30 revenue share · CTO Rishi (GCS) appointed. Enterprise-grade delivery at startup cost.
+    <strong>Technology Partners:</strong> CLUBICLES has shortlisted <a href="https://samudr.ai" target="_blank" style="color:var(--cobalt);">samudr.ai</a> and <a href="https://www.gowthamcloudsolutions.com" target="_blank" style="color:var(--cobalt);">Gowtham Cloud Solutions</a> as tech partners to build the platform. Enterprise-grade delivery aligned to the hyperlocal architecture vision.
+  </div>
+
+  <div class="note orange fa" style="margin-top:10px;">
+    <strong>Marketing approach:</strong> Since CLUBICLES is a hyperlocal solution, we are prioritising <strong>local marketing over digital marketing</strong> — neighbourhood-level activation, community partnerships, and referral networks over paid digital acquisition. A new marketing solutions framework is being developed specifically for this segment.
   </div>
 </section>
 
@@ -1456,17 +1645,17 @@ footer {
             <td><span class="phase-chip py1">Y1 · Aggregation</span></td>
             <td>Space Onboarding Fee</td>
             <td>Space Owner</td>
-            <td><div class="price">₹10,001</div><div class="price-usd">~$120 USD</div></td>
-            <td>One-time</td>
-            <td style="font-size:11px;color:var(--muted);">Listing, verification, dashboard setup</td>
+            <td><div class="price">₹10,001 / yr</div><div class="price-usd">One-time annual · ~$120</div></td>
+            <td>Annual</td>
+            <td style="font-size:11px;color:var(--muted);">Listing, verification, dashboard setup. Or ₹101/day for 90-day intro period.</td>
           </tr>
           <tr class="y1">
             <td></td>
             <td>Daily Platform Fee</td>
             <td>Space Owner</td>
-            <td><div class="price">₹101 / day</div><div class="price-usd">~$1.20/day</div></td>
+            <td><div class="price">₹101 / day</div><div class="price-usd">Introductory (90 days)</div></td>
             <td>Daily SaaS</td>
-            <td style="font-size:11px;color:var(--muted);">Recurring per active space</td>
+            <td style="font-size:11px;color:var(--muted);">Recurring per active space. Converts to annual after 90 days.</td>
           </tr>
           <tr class="y1">
             <td></td>
@@ -1474,7 +1663,7 @@ footer {
             <td>End User</td>
             <td><div class="price">₹10 / booking</div></td>
             <td>Transactional</td>
-            <td style="font-size:11px;color:var(--muted);">Low friction. Volume play.</td>
+            <td style="font-size:11px;color:var(--muted);">Low friction entry. Volume play.</td>
           </tr>
           <tr class="y1">
             <td></td>
@@ -1486,11 +1675,11 @@ footer {
           </tr>
           <tr class="y2">
             <td><span class="phase-chip py2">Y2+ · Domination</span></td>
-            <td>Basic Membership</td>
+            <td>Basic — Hot Desk</td>
             <td>End User</td>
-            <td><div class="price">₹1,001 / mo</div><div class="price-usd">~$12/mo</div></td>
-            <td>Monthly SaaS</td>
-            <td style="font-size:11px;color:var(--muted);">Hot desk + amenities</td>
+            <td><div class="price">₹101 / hr</div><div class="price-usd">New to segment · ~$1.20/hr</div></td>
+            <td>Hourly</td>
+            <td style="font-size:11px;color:var(--muted);">Pay-as-you-go hot desk. First-of-kind pricing in India co-working.</td>
           </tr>
           <tr class="y2">
             <td></td>
@@ -1502,11 +1691,11 @@ footer {
           </tr>
           <tr class="y2">
             <td></td>
-            <td>Corporate / VIP</td>
+            <td>Corporate / Satellite Office</td>
             <td>Corporate</td>
             <td><div class="price">₹1,00,001 / mo</div><div class="price-usd">~$1,200/mo</div></td>
             <td>Monthly SaaS</td>
-            <td style="font-size:11px;color:var(--muted);">Enterprise satellite office</td>
+            <td style="font-size:11px;color:var(--muted);">Block desk bookings · SLA-backed</td>
           </tr>
           <tr class="y2">
             <td></td>
@@ -1523,8 +1712,8 @@ footer {
 
   <div class="g3 fa" style="margin-top:16px;">
     <div class="moat-item">
-      <h4>~18% Take Rate</h4>
-      <p>Platform commission on gross workspace revenue. Scales with occupancy. Benchmark: Airbnb 14–16%, OYO 15–20%.</p>
+      <h4>Effective Take Rate</h4>
+      <p>Space onboarding: ₹10,001/yr = ~₹833/mo effective. Daily fee at ₹101/day × 25 active days = ₹2,525/mo. Combined platform take on a 10-seat space averaging ₹300 occupancy/day = effective 25–30% platform share — above Airbnb (14–16%) and OYO (15–20%), justified by supply-side SaaS value.</p>
     </div>
     <div class="moat-item" style="border-top-color:var(--teal);">
       <h4>Zero CAPEX</h4>
@@ -1546,7 +1735,7 @@ footer {
       <div class="ph-title">Financial Projections</div>
       <div class="ph-sub">06 · Revenue · Unit Economics · P&L Structure</div>
     </div>
-    <span class="ph-badge orange">Break-even Month 18</span>
+    <span class="ph-badge orange">Break-even Month 12–15 · Corrected Model</span>
   </div>
 
   <div class="g3 fa" style="margin-bottom:16px;">
@@ -1596,14 +1785,14 @@ footer {
 
     <div>
       <div class="ue-hero-strip fa">
-        <div class="ue-hero-item"><div class="uh-num">7.2:1</div><div class="uh-lbl">User LTV:CAC</div></div>
-        <div class="ue-hero-item"><div class="uh-num">40:1</div><div class="uh-lbl">Supply LTV:CAC</div></div>
-        <div class="ue-hero-item"><div class="uh-num">2.5mo</div><div class="uh-lbl">Payback</div></div>
+        <div class="ue-hero-item"><div class="uh-num">4.8:1</div><div class="uh-lbl">User LTV:CAC (solo)</div></div>
+        <div class="ue-hero-item"><div class="uh-num">12:1</div><div class="uh-lbl">Supply LTV:CAC (Plan A)</div></div>
+        <div class="ue-hero-item"><div class="uh-num">3 mo</div><div class="uh-lbl">Payback (supply)</div></div>
       </div>
       <div style="text-align:center;padding:20px;background:rgba(232,93,4,0.06);border:1px solid rgba(232,93,4,0.18);border-radius:var(--radius2);margin-top:12px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Y1 Exit MRR Target</div>
-        <div style="font-family:'Sora',sans-serif;font-size:40px;font-weight:700;color:var(--orange);line-height:1;">₹3,07,208</div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:6px;">100 spaces · 1,000 users · ~$3,700/mo</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Y1 Gross Revenue — Mid Scenario</div>
+        <div style="font-family:'Sora',sans-serif;font-size:40px;font-weight:700;color:var(--orange);line-height:1;">₹30.8L</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:6px;">100 spaces (50A+50B) · 1,000 users · ~$37K USD</div>
       </div>
     </div>
   </div>
@@ -1611,22 +1800,35 @@ footer {
   <div class="ue-grid fa" style="margin-top:16px;">
     <div class="ue-card">
       <div class="ue-head">User Side — Demand Economics</div>
-      <div class="ue-row"><span class="ue-l">Avg bookings / month</span><span class="ue-v">4×</span></div>
-      <div class="ue-row"><span class="ue-l">Revenue per booking</span><span class="ue-v">₹10</span></div>
-      <div class="ue-row"><span class="ue-l">Monthly revenue / user</span><span class="ue-v">₹40</span></div>
-      <div class="ue-row"><span class="ue-l">LTV (18 months)</span><span class="ue-v green">₹720</span></div>
-      <div class="ue-row"><span class="ue-l">CAC (digital)</span><span class="ue-v orange">₹100</span></div>
-      <div class="ue-row"><span class="ue-l">LTV:CAC ratio</span><span class="ue-v green">7.2:1</span></div>
-      <div class="ue-row"><span class="ue-l">Payback period</span><span class="ue-v green">2.5 months</span></div>
+      <div class="ue-row"><span class="ue-l">Solo booking (₹303/day)</span><span class="ue-v">1 person · 3 hrs · ₹101/hr</span></div>
+      <div class="ue-row"><span class="ue-l">Group booking (₹1,001/day)</span><span class="ue-v">4 members · shared space</span></div>
+      <div class="ue-row"><span class="ue-l">Avg sessions / month</span><span class="ue-v">8 days/mo (2 days/wk)</span></div>
+      <div class="ue-row"><span class="ue-l">Platform fee / booking</span><span class="ue-v">₹10 (user pays)</span></div>
+      <div class="ue-row"><span class="ue-l">Monthly platform rev / user</span><span class="ue-v">₹10 × 8 = ₹80/mo</span></div>
+      <div class="ue-row"><span class="ue-l">LTV — solo user (18 mo)</span><span class="ue-v green">₹80 × 18 = ₹1,440</span></div>
+      <div class="ue-row"><span class="ue-l">CAC — local / community</span><span class="ue-v orange">₹300</span></div>
+      <div class="ue-row"><span class="ue-l">LTV:CAC — solo user</span><span class="ue-v green">4.8:1</span></div>
+      <div class="ue-row" style="background:rgba(26,111,196,0.04);"><span class="ue-l" style="font-size:10px;color:var(--cobalt);">📌 Why this is healthy</span><span class="ue-v" style="font-size:10px;color:var(--cobalt);">Volume &amp; space-side SaaS carries model</span></div>
+      <div style="padding:8px 16px;font-size:10px;color:var(--muted);line-height:1.6;border-top:1px solid var(--slate);">
+        <strong style="color:var(--ink);">Why 4.8:1 is realistic &amp; strong:</strong> The ₹10 user booking fee is intentionally low-friction to drive volume. Platform revenue is primarily earned on the <em>supply side</em> (space SaaS). Together, supply + demand economics produce a blended unit model that mirrors Zomato's early growth — low per-transaction user fee, high recurring SaaS from the supply side. Group bookings (4 members × ₹1,001/day) are a <em>volume and utilisation play</em>, not LTV-optimised.
+      </div>
     </div>
     <div class="ue-card">
       <div class="ue-head">Space Owner Side — Supply Economics</div>
-      <div class="ue-row"><span class="ue-l">Onboarding revenue</span><span class="ue-v">₹10,001</span></div>
-      <div class="ue-row"><span class="ue-l">Daily platform fee (300d)</span><span class="ue-v">₹30,300 / yr</span></div>
-      <div class="ue-row"><span class="ue-l">3-year LTV per space</span><span class="ue-v green">₹1,00,901</span></div>
+      <div class="ue-row" style="background:rgba(232,93,4,0.04);"><span class="ue-l" style="font-weight:600;color:var(--ink);">Plan A — Annual flat</span><span class="ue-v" style="color:var(--orange);">₹10,001 / year</span></div>
+      <div class="ue-row"><span class="ue-l" style="padding-left:10px;">Effective / month</span><span class="ue-v">₹834/mo</span></div>
+      <div class="ue-row"><span class="ue-l" style="padding-left:10px;">3-year LTV (Plan A)</span><span class="ue-v green">₹10,001 × 3 = ₹30,003</span></div>
+      <div class="ue-row" style="background:rgba(26,111,196,0.04);"><span class="ue-l" style="font-weight:600;color:var(--ink);">Plan B — Daily</span><span class="ue-v" style="color:var(--cobalt);">₹101 / day</span></div>
+      <div class="ue-row"><span class="ue-l" style="padding-left:10px;">Annual (365 days)</span><span class="ue-v">₹101 × 365 = ₹36,865/yr</span></div>
+      <div class="ue-row"><span class="ue-l" style="padding-left:10px;">3-year LTV (Plan B)</span><span class="ue-v green">₹36,865 × 3 = ₹1,10,595</span></div>
       <div class="ue-row"><span class="ue-l">CAC (sales + onboarding)</span><span class="ue-v orange">₹2,500</span></div>
-      <div class="ue-row"><span class="ue-l">LTV:CAC (supply side)</span><span class="ue-v green">40:1</span></div>
+      <div class="ue-row"><span class="ue-l">LTV:CAC — Plan A</span><span class="ue-v green">12:1</span></div>
+      <div class="ue-row"><span class="ue-l">LTV:CAC — Plan B</span><span class="ue-v green">44:1</span></div>
+      <div class="ue-row"><span class="ue-l">Payback period</span><span class="ue-v green">~3 months (Plan A)</span></div>
       <div class="ue-row"><span class="ue-l">Annual churn</span><span class="ue-v green">&lt;15%</span></div>
+      <div style="padding:8px 16px;font-size:10px;color:var(--muted);line-height:1.6;border-top:1px solid var(--slate);">
+        <strong style="color:var(--ink);">Why 12:1 (Plan A) is realistic &amp; compelling:</strong> Space owner chooses one plan — not both. Plan A (₹10,001/yr flat) is simple, low-friction, and predictable. Plan B (₹101/day) suits seasonal or part-time spaces. A 12:1 LTV:CAC on Plan A is strong for a B2B SaaS play — industry benchmark is 3:1 to 5:1. The model gets stronger as spaces stay active longer (Year 2, 3 renewals = near-zero marginal CAC).
+      </div>
     </div>
   </div>
 
@@ -1635,24 +1837,29 @@ footer {
     <span>▼</span>
   </button>
   <div class="expandable" id="pl-expand">
+    <div style="background:rgba(26,111,196,0.05);border:1px solid rgba(26,111,196,0.15);border-radius:var(--radius2);padding:12px 16px;margin-bottom:12px;font-size:11px;color:var(--body);line-height:1.7;">
+      <strong style="color:var(--cobalt);">📌 How to read these numbers:</strong> Space onboarding assumes a 50/50 split — 50 spaces on Plan A (₹10,001/yr) and 50 on Plan B (₹101/day). Daily platform fees shown are Plan B spaces only (50 × ₹101 × 300 active days). Booking fees = 1,000 users × 8 sessions/month × ₹10 × 12 months. These are conservative mid-scenario projections. The model scales when space count grows — each additional space on Plan B adds ~₹30,300/yr with near-zero marginal cost.
+    </div>
     <div style="overflow-x:auto;">
       <table class="pl-table">
-        <thead><tr><th>Line Item</th><th>Y1 (₹)</th><th>Y2 (₹)</th><th>Y3 (₹)</th></tr></thead>
+        <thead><tr><th>Line Item</th><th>Y1 (₹) — basis</th><th>Y2 (₹)</th><th>Y3 (₹)</th></tr></thead>
         <tbody>
-          <tr><td colspan="4" style="color:var(--teal);font-weight:600;font-size:11px;padding:8px 10px;background:rgba(13,148,136,0.04);">Revenue</td></tr>
-          <tr><td style="padding-left:20px;">Space onboarding fees</td><td>10,00,100</td><td>20,00,100</td><td>50,00,500</td></tr>
-          <tr><td style="padding-left:20px;">Daily platform fees</td><td>30,30,000</td><td>1,09,08,000</td><td>2,91,50,000</td></tr>
-          <tr><td style="padding-left:20px;">Booking fees</td><td>3,65,000</td><td>24,00,000</td><td>96,00,000</td></tr>
-          <tr><td style="padding-left:20px;">Memberships (Y2+)</td><td>—</td><td>60,06,000</td><td>3,60,36,000</td></tr>
-          <tr class="total"><td>Gross Revenue</td><td style="color:var(--orange);">~₹21L (~$25K)</td><td style="color:var(--orange);">~₹1.5Cr (~$180K)</td><td style="color:var(--orange);">~₹15Cr (~$1.8M)</td></tr>
+          <tr><td colspan="4" style="color:var(--teal);font-weight:600;font-size:11px;padding:8px 10px;background:rgba(13,148,136,0.04);">Revenue — Space Owner Side</td></tr>
+          <tr><td style="padding-left:20px;">Plan A onboarding fees (50 spaces × ₹10,001)</td><td>5,00,050</td><td>10,00,100</td><td>25,00,250</td></tr>
+          <tr><td style="padding-left:20px;">Plan B daily fees (50 spaces × ₹101 × 300d)</td><td>15,15,000</td><td>45,45,000</td><td>1,21,20,000</td></tr>
+          <tr><td colspan="4" style="color:var(--teal);font-weight:600;font-size:11px;padding:8px 10px;background:rgba(13,148,136,0.04);">Revenue — User Side</td></tr>
+          <tr><td style="padding-left:20px;">Booking fees (1,000 users × 8 × ₹10 × 12)</td><td>9,60,000</td><td>48,00,000</td><td>1,92,00,000</td></tr>
+          <tr><td style="padding-left:20px;">Networking / VIBGYOR access (Y1 optional)</td><td>1,00,100</td><td>3,00,300</td><td>9,00,900</td></tr>
+          <tr><td style="padding-left:20px;">Memberships — Freelancer &amp; Corporate (Y2+)</td><td>—</td><td>60,06,000</td><td>3,60,36,000</td></tr>
+          <tr class="total"><td>Gross Revenue</td><td style="color:var(--orange);">~₹30.8L (~$37K)</td><td style="color:var(--orange);">~₹1.66Cr (~$200K)</td><td style="color:var(--orange);">~₹17Cr (~$2M)</td></tr>
           <tr><td colspan="4" style="color:var(--red);font-weight:600;font-size:11px;padding:8px 10px;background:rgba(220,38,38,0.03);">Operating Costs</td></tr>
           <tr><td style="padding-left:20px;">Team (2→5→12 people)</td><td>12,00,000</td><td>30,00,000</td><td>75,00,000</td></tr>
           <tr><td style="padding-left:20px;">Tech infra + cloud</td><td>3,60,000</td><td>9,00,000</td><td>18,00,000</td></tr>
-          <tr><td style="padding-left:20px;">Marketing + CAC</td><td>4,00,000</td><td>15,00,000</td><td>45,00,000</td></tr>
+          <tr><td style="padding-left:20px;">Marketing + CAC (local-first)</td><td>4,00,000</td><td>15,00,000</td><td>45,00,000</td></tr>
           <tr><td style="padding-left:20px;">Legal + compliance</td><td>1,50,000</td><td>3,00,000</td><td>6,00,000</td></tr>
           <tr><td style="padding-left:20px;">City expansion opex</td><td>—</td><td>12,00,000</td><td>36,00,000</td></tr>
-          <tr class="total"><td>EBITDA</td><td style="color:var(--muted);">~₹(−10L)</td><td style="color:var(--gold);">~₹26L</td><td style="color:var(--green);">~₹7.2Cr</td></tr>
-          <tr><td style="color:var(--teal);font-weight:500;">Break-even</td><td colspan="3" style="color:var(--teal);">Month 18 — end of Y1 / early Y2</td></tr>
+          <tr class="total"><td>EBITDA</td><td style="color:var(--muted);">~₹9.7L (small positive)</td><td style="color:var(--gold);">~₹47L</td><td style="color:var(--green);">~₹9.2Cr</td></tr>
+          <tr><td style="color:var(--teal);font-weight:500;">Break-even</td><td colspan="3" style="color:var(--teal);">Month 12–15 — ahead of earlier projection, driven by Plan B daily recurring</td></tr>
         </tbody>
       </table>
     </div>
@@ -1775,49 +1982,6 @@ footer {
   </div>
 </section>
 
-<!-- ─────────────────────────────────────
-     09 · GRANT ELIGIBILITY
-───────────────────────────────────── -->
-<section class="page" id="grants">
-  <div class="page-header">
-    <div class="ph-left">
-      <div class="ph-title">Grant Eligibility</div>
-      <div class="ph-sub">09 · Non-dilutive capital · CLUBICLES qualifies now</div>
-    </div>
-    <span class="ph-badge gold">Up to ₹120L in grants</span>
-  </div>
-
-  <div class="g2 fa">
-    <div class="grant-card">
-      <div class="gc-scheme">DPIIT · Startup India</div>
-      <div class="gc-title">Startup India Seed Fund Scheme (SISFS)</div>
-      <div class="gc-desc">Government of India seed fund for DPIIT-recognised startups at proof-of-concept stage. CLUBICLES is at exactly this stage. Actively applying.</div>
-      <div class="gc-amt">Up to ₹20 Lakhs</div>
-    </div>
-    <div class="grant-card">
-      <div class="gc-scheme">DST · Government of India</div>
-      <div class="gc-title">DST-NIDHI Programme</div>
-      <div class="gc-desc">National Initiative for Developing & Harnessing Innovations. Supports tech-enabled platforms with social impact — hyperlocal work infrastructure qualifies directly.</div>
-      <div class="gc-amt">Up to ₹50 Lakhs</div>
-    </div>
-    <div class="grant-card">
-      <div class="gc-scheme">Karnataka Government</div>
-      <div class="gc-title">Karnataka ELEVATE 100</div>
-      <div class="gc-desc">Karnataka's flagship grant for top 100 startups. CLUBICLES is Bengaluru-native, DPIIT registered, and addresses a core urban infrastructure gap — ideal fit.</div>
-      <div class="gc-amt">Up to ₹50 Lakhs</div>
-    </div>
-    <div class="grant-card">
-      <div class="gc-scheme">SIDBI · Government of India</div>
-      <div class="gc-title">SIDBI Startup Mitra / CGTMSE</div>
-      <div class="gc-desc">Credit guarantee and collateral-free debt for DPIIT-registered startups. Suitable post-seed for operational capital. Reduces equity dilution at Series A.</div>
-      <div class="gc-amt">₹10L – ₹2 Crore (debt)</div>
-    </div>
-  </div>
-
-  <div class="note gold fa" style="margin-top:16px;">
-    <strong>Strategic note:</strong> A co-investor participating alongside grant funding effectively gets significantly higher coverage per rupee invested. SISFS and Karnataka ELEVATE 100 applications are in progress parallel to this raise.
-  </div>
-</section>
 
 <!-- ─────────────────────────────────────
      10 · USE OF FUNDS
@@ -1888,14 +2052,15 @@ footer {
       <div class="panel">
         <div class="panel-head"><span class="panel-title">Round Terms</span></div>
         <div class="panel-body compact">
-          <div class="info-row"><span class="ir-label">Round Structure</span><span class="ir-value">Grant / Convertible Note</span></div>
-          <div class="info-row"><span class="ir-label">Instrument</span><span class="ir-value">Flexible — per partner</span></div>
-          <div class="info-row"><span class="ir-label">Runway</span><span class="ir-value">15 months → Series A</span></div>
-          <div class="info-row"><span class="ir-label">Next milestone</span><span class="ir-value">Series A · ₹5–10 Cr</span></div>
-          <div class="info-row"><span class="ir-label">Min. ticket</span><span class="ir-value">₹5 Lakhs (~$6K)</span></div>
-          <div class="info-row"><span class="ir-label">Entity</span><span class="ir-value">CLUBICLES LLP</span></div>
+          <div class="info-row"><span class="ir-label">Entity</span><span class="ir-value">CLUBICLES LLP · ACS-4017</span></div>
           <div class="info-row"><span class="ir-label">GSTIN</span><span class="ir-value">29AAVFC8030H1Z1</span></div>
           <div class="info-row"><span class="ir-label">DPIIT / StartupIndia</span><span class="ir-value">✦ Registered &amp; Recognised</span></div>
+          <div class="info-row"><span class="ir-label">Runway</span><span class="ir-value">15 months → Series A</span></div>
+          <div class="info-row"><span class="ir-label">Next milestone</span><span class="ir-value">Series A · ₹5–10 Cr</span></div>
+          <div class="partner-box" style="margin-top:12px;">
+            <div class="partner-box-title">Partnership structure &amp; terms</div>
+            <div class="partner-box-sub">Open to government grants, strategic partnerships, and co-investment. Structure to be discussed based on partner profile.</div>
+          </div>
         </div>
       </div>
 
@@ -1945,18 +2110,41 @@ footer {
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ALL LINKS -->
-  <div class="links-bar fa" style="margin-top:24px;">
-    <a class="link-btn orange" href="https://wa.me/916292306090?text=Hi%20Bharath%2C%20I%20came%20across%20the%20CLUBICLES%20pitch%20and%20I%27d%20like%20to%20explore%20the%20grant%2Fpartnership%20opportunity." target="_blank">💬 WhatsApp Bharath</a>
-    <a class="link-btn" href="https://clubicles-f11.vercel.app" target="_blank">🔗 GTM Live Demo</a>
-    <a class="link-btn" href="https://www.canva.com/design/DAGztZPFhOE/czVujSTTKXlL4o1SShZBAg/view" target="_blank">📊 Full Pitch Deck (Canva)</a>
-    <a class="link-btn" href="https://wa.me/916292306090" target="_blank">📞 +91 62923 06090</a>
+<!-- ─────────────────────────────────────
+     PIPELINE
+───────────────────────────────────── -->
+<section class="page" id="pipeline" style="padding-bottom:10px;">
+  <div class="page-header">
+    <div class="ph-left">
+      <div class="ph-title">Pipeline &amp; Next Steps</div>
+      <div class="ph-sub">Immediate roadmap items in progress</div>
+    </div>
+    <span class="ph-badge cobalt">Building Now</span>
+  </div>
+  <div class="fa">
+    <div class="pipeline-card">
+      <h5><span class="pipeline-badge orange">IMMEDIATE</span> Brand Deck for CLUBICLES</h5>
+      <p>A dedicated brand deck is being built to establish visual identity, tone of voice, and positioning across all touchpoints — for investors, space owners, and members.</p>
+    </div>
+    <div class="pipeline-card">
+      <h5><span class="pipeline-badge">IN PROGRESS</span> Hyperlocal Marketing Framework</h5>
+      <p>Since CLUBICLES is a hyperlocal solution, a new marketing solutions framework is being designed — neighbourhood activation, referral networks, and community partnerships over paid digital.</p>
+    </div>
+    <div class="pipeline-card">
+      <h5><span class="pipeline-badge">IN PROGRESS</span> Tech Partners Onboarding</h5>
+      <p>Platform build with <a href="https://samudr.ai" target="_blank" style="color:var(--cobalt);">samudr.ai</a> and <a href="https://www.gowthamcloudsolutions.com" target="_blank" style="color:var(--cobalt);">Gowtham Cloud Solutions</a> being finalised. Multi-tenant SaaS architecture scoped.</p>
+    </div>
+    <div class="pipeline-card">
+      <h5><span class="pipeline-badge">UPCOMING</span> Project F11 Flagship Space</h5>
+      <p>11-seat premium co-working space near Bengaluru — FOCO/COCO proof of concept. Investor-visitable. Unit economics visible in real life.</p>
+    </div>
   </div>
 </section>
 
 <!-- ─────────────────────────────────────
-     12 · FULL PITCH DECK EMBED
+     FULL PITCH DECK EMBED
 ───────────────────────────────────── -->
 <section class="page" id="pitch-deck">
   <div class="page-header">
@@ -1984,10 +2172,41 @@ footer {
 
   <div class="links-bar fa" style="margin-top:20px;">
     <a class="link-btn orange" href="https://wa.me/916292306090?text=Hi%20Bharath%2C%20I%20came%20across%20the%20CLUBICLES%20pitch%20and%20I%27d%20like%20to%20explore%20the%20grant%2Fpartnership%20opportunity." target="_blank">💬 Connect on WhatsApp</a>
-    <a class="link-btn" href="https://clubicles-f11.vercel.app" target="_blank">🔗 GTM Live Demo</a>
+    <a class="link-btn" href="https://clubicles.club" target="_blank">🔗JOIN NOW - LIVE</a>
     <a class="link-btn" href="https://www.canva.com/design/DAGztZPFhOE/czVujSTTKXlL4o1SShZBAg/view" target="_blank">📊 Open Deck Full Screen</a>
+    <a class="link-btn" href="https://clubicles.com" target="_blank">🤝 CLUBICLES.COM</a>
+    <a class="link-btn" href="tel:+916292306090">📞 +91 62923 06090</a>
   </div>
 </section>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOMO STRIP — BOTTOM
+══════════════════════════════════════ -->
+<div style="max-width:1200px;margin:0 auto;padding:0 32px 20px;">
+  <div class="fomo-bottom fa">
+    <div class="fb-eyebrow">⏳ Market Window — Now Open</div>
+    <div class="fb-text">
+      <strong>Window open now.</strong> Awfis listed on NSE. Smartworks IPO'd July 2025 at ₹582Cr. IndiQube filed DRHP. Every institutional player validated the co-working thesis — and every single one left the <strong>neighbourhood workspace completely untouched.</strong> That gap is CLUBICLES. And it will not stay empty for long.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     INVESTOR STRATEGIC NOTE — EXPANDABLE
+══════════════════════════════════════ -->
+<div class="inv-note-wrap">
+  <button class="inv-expand-btn" onclick="toggleInv(this)">
+    <span>📋 Strategic note for grant co-investors — click to read</span>
+    <span id="inv-arr">▼</span>
+  </button>
+  <div class="inv-expandable" id="inv-expand">
+    <div class="inv-inner">
+      <strong>For co-investors participating alongside grant funding:</strong> A partner who participates in the ₹70L strategic round alongside non-dilutive grant capital (SISFS, ELEVATE 100) effectively gets significantly higher coverage per rupee invested. CLUBICLES is actively applying to SISFS and Karnataka ELEVATE 100 in parallel with this raise. Grant approvals reduce the effective equity burden on co-investors while accelerating the same milestone targets.
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════
      FOOTER
@@ -1997,7 +2216,8 @@ footer {
     <div>
       <div class="f-brand-logo">CLUBI<em>C</em>LES</div>
       <div class="f-brand-desc">India's first hyperlocal co-working aggregator. Workspaces within 15 minutes of home. Asset-light. Community-first. Built for 400M Indian knowledge workers.</div>
-      <span class="f-brand-badge">✦ DPIIT Registered · StartupIndia Recognised</span>
+      <div style="margin-bottom:8px;"><span class="f-brand-badge">✦ DPIIT Registered · StartupIndia Recognised</span></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);margin-top:6px;letter-spacing:0.05em;">CONNECT · COLLABORATE · CREATE</div>
     </div>
     <div>
       <div class="f-section-title">Contact</div>
@@ -2005,19 +2225,21 @@ footer {
       <div class="f-item"><a href="https://wa.me/916292306090">WhatsApp: +91 62923 06090</a></div>
       <div class="f-item"><a href="https://clubicles-f11.vercel.app" target="_blank">GTM Demo: clubicles-f11.vercel.app</a></div>
       <div class="f-item"><a href="https://www.canva.com/design/DAGztZPFhOE/czVujSTTKXlL4o1SShZBAg/view" target="_blank">Full Pitch Deck (Canva)</a></div>
+      <div class="f-item"><a href="https://samudr.ai" target="_blank">Tech Partner: samudr.ai</a></div>
+      <div class="f-item"><a href="https://www.gowthamcloudsolutions.com" target="_blank">Tech Partner: Gowtham Cloud Solutions</a></div>
     </div>
     <div>
       <div class="f-section-title">Legal &amp; Registration</div>
       <div class="f-item"><span class="mono">Entity: CLUBICLES LLP</span></div>
+      <div class="f-item"><span class="mono">LLP ID: ACS-4017</span></div>
       <div class="f-item"><span class="mono">GSTIN: 29AAVFC8030H1Z1</span></div>
-      <div class="f-item"><span class="mono">CIN: U63122KA2026OPC214615</span></div>
-      <div class="f-item"><span class="mono">Parent: IPNOTEC Corp (OPC) Pvt Ltd</span></div>
+      <div class="f-item"><span class="mono">DPIIT · StartupIndia Recognised</span></div>
       <div class="f-item"><span class="mono">Bengaluru, Karnataka, India</span></div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div>© 2026 CLUBICLES LLP · All rights reserved</div>
-    <div>Confidential · Grant &amp; Strategic Partner discussion only · Version 4.0 · May 2026</div>
+    <div>© 2026 CLUBICLES LLP · ACS-4017 · All rights reserved</div>
+    <div>Confidential · Grant &amp; Strategic Partner discussion only · Version 4.1 · May 2026</div>
   </div>
 </footer>
 
@@ -2124,6 +2346,13 @@ function togglePL(btn) {
   const el = document.getElementById('pl-expand');
   el.classList.toggle('open');
   btn.querySelector('.btn-txt').textContent = el.classList.contains('open') ? 'Hide P&L details' : 'View full P&L structure';
+}
+
+/* ── INVESTOR NOTE EXPAND ── */
+function toggleInv(btn) {
+  const el = document.getElementById('inv-expand');
+  el.classList.toggle('open');
+  document.getElementById('inv-arr').textContent = el.classList.contains('open') ? '▲' : '▼';
 }
 </script>
 </body>
